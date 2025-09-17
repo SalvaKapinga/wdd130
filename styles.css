@@ -1,10 +1,10 @@
 /* Reset some defaults */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 
 header {
     background-color: #333;
@@ -38,7 +38,10 @@ main {
 main img {
     width: 150px;
     height: auto;
-    border-radius: 50%;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px grey;
+    float: right;
 }
 
 /* Aside section */
@@ -68,4 +71,13 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
     padding: 1rem;
+}
+
+/* Class selector */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #000;
 }
