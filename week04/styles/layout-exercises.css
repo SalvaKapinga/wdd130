@@ -1,59 +1,51 @@
-* {
+/* General styling for all exercises */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    margin: 1rem;
-    font-family: monospace;
-    font-size: 1.2rem;
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #333;
 }
 
-div {
-    margin: 1rem;
-    border: 1px dashed;
-    padding: 1rem;
+.box {
+    background-color: #ddd;
+    border: 1px solid #666;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.one {
-    width: 200px;
-    height: 200px;
-}
-
+/* Exercise 1: Center box */
 .flex {
     background-color: #aba;
-    /* write declarations here */
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    /* make space to see centering */
 }
 
-.grid {
-    background-color: #abb;
-    /* enter declarations here */
-
-}
-
+/* Exercise 2: Flex wrap with spacing */
 .container2 {
-    /* write declarations here */
-
+    background-color: #aab;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.two {
-    background-color: #ace;
-    height: 100px;
-}
-
+/* Exercise 3: 3-column grid */
 .container3 {
-    /* write declarations here */
-
+    background-color: #abb;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .columns-3 {
-    /* write declaration here */
-
-}
-
-.three {
-    margin: .25rem;
-    background-color: #abd;
+    grid-column: 1 / 4;
+    /* spans all 3 columns */
 }

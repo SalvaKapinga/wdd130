@@ -1,23 +1,32 @@
+/* CSS Variables */
 :root {
     --primary-color: #1b4d3e;
+    /* dark green */
     --secondary-color: #f4a261;
+    /* warm orange */
     --accent1-color: #264653;
+    /* deep blue */
     --accent2-color: #e9c46a;
+    /* light gold */
     --heading-font: "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.6;
 }
 
+/* Page Width */
 header,
 main,
 footer {
@@ -25,23 +34,25 @@ footer {
     margin: 0 auto;
 }
 
+/* Header - Grid Layout */
 header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 150px auto;
     align-items: center;
-    padding: 8px;
+    background-color: var(--primary-color);
+    padding: 10px;
 }
 
 header img {
-    height: 60px;
+    max-height: 60px;
 }
 
+/* Navigation - Flex Layout */
 nav ul {
-    list-style: none;
     display: flex;
+    justify-content: flex-end;
     gap: 20px;
+    list-style: none;
 }
 
 nav a {
@@ -54,14 +65,18 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
+/* Headings */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
+    margin-top: 20px;
 }
 
 .hero img {
@@ -94,25 +109,56 @@ h2 {
     float: right;
     width: 125px;
     margin-left: 10px;
+    border-radius: 8px;
 }
 
-section {
-    margin: 16px;
+/* History Section */
+.history {
+    margin: 20px 0;
     padding: 8px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
 }
 
-footer {
-    margin-top: 20px;
+/* Adventures Section */
+.adventures {
+    margin: 20px 0;
+}
+
+.adventure-figures {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.adventure-figures figure {
     text-align: center;
+    flex: 1;
+}
+
+.adventure-figures img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 2px solid var(--accent1-color);
 }
 
 .socialmedia {
-    margin-top: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .socialmedia a {
     text-decoration: none;
-    margin: 0 10px;
 }
 
 .socialmedia img {
